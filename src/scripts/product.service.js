@@ -29,14 +29,14 @@ productservice.getproduct = async () => {
   return fetch(productservice.endpoint).then((response) => response.json());
 };
 
-//! Update product
+//! DELETE product
 productservice.deleteproduct = async (elements) => {
   // Destructure the elements object
   const { id } = elements;
 
   // Create a product object
   let product = {
-    id: _id.value, 
+    _id: id.value, 
   };
 
   // Send the product object to the server
