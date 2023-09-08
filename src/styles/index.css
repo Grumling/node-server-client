@@ -23,20 +23,20 @@
     :root {
         
         /* Global Variables */
-        --background-color: #111;
-        --font-color : #fff;
-        --link-color : #fff;
-        --link-hover-color : moccasin;
+        --background-color: #5cdb95;
+        --font-color : #05386b;
+        --link-color : #05386b;
+        --link-hover-color : #8ee4af;
 
-        --list-border-color : #FFF;
-        --list-background-color : #333;
+        --list-border-color : #8ee4af;
+        --list-background-color :#379683;
 
-        --navigation-background-color : #333;
+        --navigation-background-color : #379683;
 
-        --button-background-color : #333;
-        --button-font-color : #FFF;
+        --button-background-color : #05386b;
+        --button-font-color : #edf5e1;
 
-        --button-background-hover-color : #fff;
+        --button-background-hover-color : #8ee4af;
         --button-font-hover-color : #333;
     }
 
@@ -132,12 +132,20 @@ label {
     font-weight: 700;
 }
 
+
 input {
     margin: 10px 0;
-    padding: 15px;
+    padding: 10px;
     font-size: 18px;
     display: block;
     width: 100%;
+    background: var(--list-background-color);
+    border: none;
+    border-radius: 0.3rem;
+}
+
+input:focus {
+    outline: none;
 }
 
 button {
