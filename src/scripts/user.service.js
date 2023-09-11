@@ -1,5 +1,6 @@
 const userservice = {};
 userservice.endpoint = 'http://localhost:3000/user'; // The endpoint of the API
+userservice.endpointUsers = 'http://localhost:3000/users/'; //! New endpoint for users
 
 // Create Users
 userservice.createUser = async (elements) => {
@@ -29,10 +30,18 @@ userservice.createUser = async (elements) => {
   
 };
 
-//! Read Users
+/* // Read Users
 userservice.getUsers = async () => {
 
     return fetch(userservice.endpoint)
+        .then((response) => response.json())
+
+} */
+
+//! Read Users NEW READ
+userservice.getUserS = async () => { // <-- Læg mærke til vi har omdøbt til getUsers.
+
+    return fetch(userservice.endpointUsers) // <-- Læg mærke til det nye endpoint
         .then((response) => response.json())
 
 }
