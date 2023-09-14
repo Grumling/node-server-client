@@ -16,10 +16,15 @@
 
 <body>
 
-    <h1><a href="/">C.R.U.D</a></h1>
-
     <nav class="navigation">
-        <span>PRODUCTS | Create</span>
+        <h1><a href="../index.html">C.R.U.D</a></h1>
+        
+        <p>/ USERS</p>
+        <a href="/users/create.html">CREATE</a>
+        <a href="/users/read.html">READ</a>
+        <a href="/users/update.html">UPDATE</a>
+        <a href="/users/delete.html">DELETE</a>
+        <p>/ PRODUCTS</p>
         <a href="/products/create.html">CREATE</a>
         <a href="/products/read.html">READ</a>
         <a href="/products/update.html">UPDATE</a>
@@ -29,27 +34,25 @@
     <form id="createFormProduct">
 
         <label>
-            Title:
-            <input type="text" name="title" required />
+            <input placeholder="Title:" type="text" name="title" required />
         </label>
 
         <label>
-            Category:
-            <input type="text" name="category" required />
+            <input placeholder="Category:" type="text" name="category" required />
         </label>
 
         <label>
-            Price:
-            <input type="number" name="price" required />
+            <input placeholder="Price:" type="number" name="price" required />
         </label>
 
         <label>
-            Disocunt in Percent:
-            <input type="number" name="disocuntInPercent" />
+            Disocunt:
+            <output>24</output> %
+            <input name="discountInPercent" type="range" value="24" min="1" max="100" oninput="this.previousElementSibling.value = this.value">
         </label>
 
         <label>
-            recommended:
+            recommended: (Check for Yes):
             <input type="checkbox" name="recommended" />
         </label>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,58 +13,60 @@
     <link rel="stylesheet" href="../src/styles/index.css">
     <link rel="shortcut icon" href="../mcdm.ico" type="image/x-icon">
     <script src="../src/scripts/index.js" type="module"></script>
-    
+
 </head>
+
 <body>
 
-    <h1><a href="/">C.R.U.D</a></h1>
-
     <nav class="navigation">
-        <span>PRODUCTS | Update</span>
+        <h1><a href="../index.html">C.R.U.D</a></h1>
+
+        <p>/ USERS</p>
+        <a href="/users/create.html">CREATE</a>
+        <a href="/users/read.html">READ</a>
+        <a href="/users/update.html">UPDATE</a>
+        <a href="/users/delete.html">DELETE</a>
+        <p>/ PRODUCTS</p>
         <a href="/products/create.html">CREATE</a>
         <a href="/products/read.html">READ</a>
         <a href="/products/update.html">UPDATE</a>
         <a href="/products/delete.html">DELETE</a>
     </nav>
 
-<!-- 
-    <th>Title</th>
-    <th>Category</th>
-    <th>Price</th>
-    <th>Disocunt in Percent</th>
-    <th>recommended</th> -->
-
     <form id="updateFormProduct">
 
         <label>
-            Title:
-            <input type="text" name="email" required />
-        </label>
-        
-        <label>
-            Category:
-            <input type="text" name="firstname" required/>
+            <input placeholder="Id:" type="text" name="_id" required />
         </label>
 
         <label>
-            Price:
-            <input type="text" name="surname" required/>
+            <input placeholder="Title:" type="text" name="title" required />
         </label>
 
         <label>
-            Disocunt in Percent:
-            <input type="number" name="age" required/>
+            <input placeholder="Category:" type="text" name="category" required />
         </label>
 
         <label>
-            recommended:
-            <input type="checkbox" name="street" required/>
+            <input placeholder="Price:" type="number" name="price" required />
+        </label>
+
+        <label>
+            Disocunt:
+            <output>24</output> %
+            <input name="discountInPercent" type="range" value="24" min="1" max="100" oninput="this.previousElementSibling.value = this.value">
+        </label>
+
+        <label>
+            recommended: (Check for Yes):
+            <input type="checkbox" name="recommended" />
         </label>
 
         <button>Update</button>
-        
+
     </form>
 
 
 </body>
+
 </html>
